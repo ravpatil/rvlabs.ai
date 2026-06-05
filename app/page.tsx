@@ -8,6 +8,7 @@ import {
   videos,
   whyItems,
 } from './data/siteContent';
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   return (
@@ -173,23 +174,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <form className="space-y-5 rounded-3xl border border-slate-800/90 bg-[#101010]/95 p-8">
-              <div>
-                <label className="block text-sm font-semibold text-slate-200">Name</label>
-                <input type="text" placeholder="Your name" className="mt-3 w-full rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 outline-none ring-1 ring-transparent transition focus:border-orange-500 focus:ring-orange-500/30" />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-200">Email</label>
-                <input type="email" placeholder="you@example.com" className="mt-3 w-full rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 outline-none ring-1 ring-transparent transition focus:border-orange-500 focus:ring-orange-500/30" />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-slate-200">Message</label>
-                <textarea rows={4} placeholder="How can RVLabs help your team?" className="mt-3 w-full rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-slate-100 outline-none ring-1 ring-transparent transition focus:border-orange-500 focus:ring-orange-500/30" />
-              </div>
-              <button type="submit" className="inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-orange-400">
-                Send message
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

@@ -89,7 +89,7 @@ export const videos = [
 ];
 
 export const contactInfo = {
-  email: 'hello@rvlabs.ai',
+  email: 'rvpatil@gmail.com',
   linkedin: 'linkedin.com/in/rvlabs',
-  whatsapp: '+1 (555) 123-4567',
+  whatsapp: '+91 8698599367',
 };
