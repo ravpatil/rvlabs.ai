@@ -20,7 +20,7 @@ export default function Home() {
             <p className="mt-2 text-sm text-slate-400">Enterprise AI consulting, training & solutions</p>
           </div>
           <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-            {navLinks.map((link) => (
+            {navLinks.map((link: any) => (
               <a key={link.href} href={link.href} className="transition hover:text-white">
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ export default function Home() {
             <h2 className="mt-4 text-3xl font-semibold text-white">What RVLabs delivers for enterprise teams</h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
+            {services.map((service: any) => (
               <div key={service.name} className="rounded-3xl border border-slate-800/90 bg-[#101010]/95 p-6 transition hover:-translate-y-1 hover:border-orange-500/50">
                 <p className="text-base font-semibold text-white">{service.name}</p>
                 <p className="mt-3 text-sm leading-7 text-slate-400">{service.description}</p>
@@ -78,7 +78,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-4">
-            {whyItems.map((item) => (
+            {whyItems.map((item: any) => (
               <div key={item} className="rounded-3xl border border-slate-800/90 bg-[#101010]/95 p-6">
                 <p className="text-sm uppercase tracking-[0.18em] text-orange-300">{item.split(' ')[0]}</p>
                 <p className="mt-4 text-lg font-semibold text-white">{item}</p>
@@ -97,7 +97,7 @@ export default function Home() {
               Founder experience includes large-scale AI infrastructure, LLM serving, production support, and technical training for developer and platform teams.
             </p>
             <div className="mt-8 grid gap-3 text-slate-300 sm:grid-cols-2">
-              {founderBadges.map((badge) => (
+              {founderBadges.map((badge: any) => (
                 <span key={badge} className="inline-flex items-center rounded-full border border-orange-500/20 bg-orange-500/5 px-4 py-2 text-sm text-orange-200">
                   {badge}
                 </span>
@@ -129,7 +129,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-4">
-            {blogPosts.map((post) => (
+            {blogPosts.map((post: any) => (
               <a key={post.title} href={post.href} className="rounded-3xl border border-slate-800/90 bg-[#101010]/95 p-6 transition hover:border-orange-500/60">
                 <p className="text-lg font-semibold text-white">{post.title}</p>
                 <p className="mt-3 text-sm leading-7 text-slate-400">{post.description}</p>
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {videos.map((video) => (
+          {videos.map((video: any) => (
             <a key={video.title} href={video.href} className="rounded-3xl border border-slate-800/90 bg-[#101010]/95 p-6 transition hover:border-cyan-400/50">
               <div className="inline-flex items-center gap-3 rounded-full bg-orange-500/10 px-3 py-1 text-xs uppercase tracking-[0.25em] text-orange-300">
                 Video
