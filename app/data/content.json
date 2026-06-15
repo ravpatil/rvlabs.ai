@@ -1,36 +1,182 @@
 {
   "navLinks": [
-    { "label": "Services", "href": "#services" },
-    { "label": "Why RVLabs", "href": "#why" },
-    { "label": "Founder", "href": "#about" },
-    { "label": "Insights", "href": "#insights" },
-    { "label": "Contact", "href": "#contact" }
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Why RVAI",
+      "href": "#why"
+    },
+    {
+      "label": "Blogs",
+      "href": "#blogs"
+    },
+    {
+      "label": "Trainings",
+      "href": "#trainings"
+    },
+    {
+      "label": "Community",
+      "href": "#community"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
   ],
   "hero": {
-    "badge": "Enterprise AI. Built for production.",
-    "title": "Helping organizations adopt AI securely, efficiently, and at scale.",
-    "copy": "RVLabs combines OpenShift, AI infrastructure, and LLMOps expertise to deliver enterprise-grade generative AI strategy, training, and implementation.",
-    "primaryCta": { "label": "Book Consultation", "href": "#contact" },
-    "secondaryCta": { "label": "Explore Services", "href": "#services" }
+    "badge": "Neural intelligence. Enterprise scale.",
+    "title": "Where AI meets production-ready engineering.",
+    "copy": "RVAI Labs combines generative AI, cloud-native infrastructure, and LLMOps expertise to help organizations build, deploy, and scale intelligent systems.",
+    "primaryCta": {
+      "label": "Start a Project",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "Explore Services",
+      "href": "#services"
+    }
   },
   "services": [
-    { "name": "AI Strategy & Consulting", "description": "Align AI roadmaps with security, compliance, and enterprise operational requirements." },
-    { "name": "Enterprise AI Training", "description": "Enable developer and platform teams with practical AI skills and hands-on workshops." },
-    { "name": "GenAI Workshops", "description": "Run guided sessions that surface use cases, metrics, and MVP pathways for your business." },
-    { "name": "Agentic AI Solutions", "description": "Design intelligent workflows and automation that integrate with existing enterprise systems." },
-    { "name": "OpenShift AI & Kubernetes AI", "description": "Build scalable AI platforms on OpenShift and Kubernetes with enterprise-grade tooling." },
-    { "name": "Model Serving & LLMOps", "description": "Deploy, monitor, and manage LLMs with operational stability and cost control." }
+    {
+      "name": "AI Strategy & Consulting",
+      "description": "Align AI roadmaps with security, compliance, and enterprise operational requirements.",
+      "icon": "strategy"
+    },
+    {
+      "name": "Enterprise AI Training",
+      "description": "Enable developer and platform teams with practical AI skills and hands-on workshops.",
+      "icon": "training"
+    },
+    {
+      "name": "GenAI Workshops",
+      "description": "Run guided sessions that surface use cases, metrics, and MVP pathways for your business.",
+      "icon": "workshop"
+    },
+    {
+      "name": "Agentic AI Solutions",
+      "description": "Design intelligent workflows and automation that integrate with existing enterprise systems.",
+      "icon": "agents"
+    },
+    {
+      "name": "OpenShift AI & Kubernetes AI",
+      "description": "Build scalable AI platforms on OpenShift and Kubernetes with enterprise-grade tooling.",
+      "icon": "platform"
+    },
+    {
+      "name": "Model Serving & LLMOps",
+      "description": "Deploy, monitor, and manage LLMs with operational stability and cost control.",
+      "icon": "llmops"
+    }
   ],
-  "whyItems": ["Enterprise-first approach", "Open-source expertise", "AI + Cloud Native specialization", "Real-world implementation experience"],
-  "founderBadges": ["OpenShift", "AI Infrastructure", "LLM Serving", "Enterprise Support", "Community Speaker"],
+  "whyItems": [
+    {
+      "title": "Enterprise-first",
+      "description": "Security, compliance, and operational rigor baked into every AI initiative."
+    },
+    {
+      "title": "Open-source native",
+      "description": "Deep expertise in Kubernetes, OpenShift, and the cloud-native AI ecosystem."
+    },
+    {
+      "title": "AI + Cloud synergy",
+      "description": "Specialized at the intersection of generative AI and platform engineering."
+    },
+    {
+      "title": "Battle-tested delivery",
+      "description": "Real-world implementation experience from prototype to production."
+    }
+  ],
   "blogPosts": [
-    { "title": "Enterprise AI Roadmap for 2026", "description": "A practical guide for turning AI experiments into production-ready systems.", "href": "#" },
-    { "title": "Kubernetes AI Patterns", "description": "How to architect scalable AI workloads on OpenShift and cloud native platforms.", "href": "#" },
-    { "title": "LLMOps for Real Teams", "description": "Best practices for deployment, monitoring, and support of large language models.", "href": "#" }
+    {
+      "title": "Enterprise AI Roadmap for 2026",
+      "description": "A practical guide for turning AI experiments into production-ready systems.",
+      "href": "#",
+      "date": "Mar 2026",
+      "tag": "Strategy"
+    },
+    {
+      "title": "Kubernetes AI Patterns",
+      "description": "How to architect scalable AI workloads on OpenShift and cloud native platforms.",
+      "href": "#",
+      "date": "Feb 2026",
+      "tag": "Platform"
+    },
+    {
+      "title": "LLMOps for Real Teams",
+      "description": "Best practices for deployment, monitoring, and support of large language models.",
+      "href": "#",
+      "date": "Jan 2026",
+      "tag": "LLMOps"
+    },
+    {
+      "title": "Building Agentic Workflows",
+      "description": "Design patterns for autonomous AI agents in enterprise environments.",
+      "href": "#",
+      "date": "Dec 2025",
+      "tag": "Agents"
+    }
   ],
-  "videos": [
-    { "title": "AI Infrastructure on OpenShift", "description": "Demo of AI platform deployment and model serving workflows.", "href": "#" },
-    { "title": "GenAI Workshop Highlights", "description": "Preview of how RVLabs runs enterprise-ready AI training sessions.", "href": "#" }
+  "trainings": [
+    {
+      "title": "GenAI for Developers",
+      "description": "Hands-on workshop covering prompt engineering, RAG, and API integration.",
+      "href": "#",
+      "duration": "2 days",
+      "level": "Intermediate"
+    },
+    {
+      "title": "OpenShift AI Bootcamp",
+      "description": "Deploy and manage AI workloads on OpenShift with enterprise tooling.",
+      "href": "#",
+      "duration": "3 days",
+      "level": "Advanced"
+    },
+    {
+      "title": "LLMOps Masterclass",
+      "description": "End-to-end model serving, monitoring, and cost optimization strategies.",
+      "href": "#",
+      "duration": "1 day",
+      "level": "Advanced"
+    },
+    {
+      "title": "AI Infrastructure Fundamentals",
+      "description": "GPU scheduling, model serving, and platform architecture for AI teams.",
+      "href": "#",
+      "duration": "2 days",
+      "level": "Beginner"
+    }
   ],
-  "contactInfo": { "email": "rvgpatil@gmail.com", "linkedin": "linkedin.com/in/rvlabs", "whatsapp": "+91 8698599367" }
+  "community": [
+    {
+      "title": "AI Platform Meetups",
+      "description": "Monthly sessions on Kubernetes AI, LLMOps, and enterprise GenAI adoption.",
+      "href": "#",
+      "type": "Events"
+    },
+    {
+      "title": "Open Source Contributions",
+      "description": "Active contributions to cloud-native AI projects and tooling ecosystems.",
+      "href": "#",
+      "type": "OSS"
+    },
+    {
+      "title": "Technical Talks",
+      "description": "Conference presentations and community talks on AI infrastructure and agents.",
+      "href": "#",
+      "type": "Speaking"
+    },
+    {
+      "title": "Knowledge Base",
+      "description": "Curated resources, guides, and reference architectures for AI practitioners.",
+      "href": "#",
+      "type": "Resources"
+    }
+  ],
+  "contactInfo": {
+    "email": "rvgpatil@gmail.com",
+    "linkedin": "linkedin.com/in/rvlabs",
+    "whatsapp": "+91 8698599367"
+  }
 }

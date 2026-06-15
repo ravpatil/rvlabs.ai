@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'RVLabs | Enterprise AI',
-  description: 'RVLabs helps organizations adopt AI securely, efficiently, and at scale.',
+  title: 'RVAI Labs | Enterprise AI Engineering',
+  description: 'RVAI Labs helps organizations build, deploy, and scale production-ready AI systems.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
