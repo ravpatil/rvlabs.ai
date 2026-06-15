@@ -59,7 +59,14 @@ export default function ContactForm() {
         </button>
       </div>
 
-      {status === "success" && <p className="text-sm text-green-400">Message sent — thanks! I will reply soon.</p>}
+      {status === "success" && (
+        <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4">
+          <p className="text-sm font-semibold text-emerald-300">Message sent — thank you!</p>
+          <p className="mt-2 text-sm text-slate-400">
+            We respond within 24 hours on business days. For faster scheduling, use the Book Discovery button above or WhatsApp.
+          </p>
+        </div>
+      )}
       {status === "error" && <p className="text-sm text-red-400">Error sending message: {error}</p>}
     </form>
   );

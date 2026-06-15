@@ -36,7 +36,7 @@ export default function NavBar({ links }: { links: NavLink[] }) {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-gradient-to-r from-violet-500 via-cyan-500 to-pink-500 px-5 py-2 text-sm font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.4)] transition hover:scale-105 hover:shadow-[0_0_32px_rgba(244,114,182,0.45)] md:inline-flex"
         >
           Get Started

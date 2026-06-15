@@ -76,10 +76,12 @@ export default function AIBackground() {
       canvas.style.height = `${window.innerHeight}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+      const isMobile = window.innerWidth < 768;
       const area = window.innerWidth * window.innerHeight;
+      const maxCount = isMobile ? 65 : 130;
       const count = reducedMotion
-        ? Math.min(40, Math.floor(area / 28000))
-        : Math.min(130, Math.floor(area / 12000));
+        ? Math.min(35, Math.floor(area / 32000))
+        : Math.min(maxCount, Math.floor(area / (isMobile ? 16000 : 12000)));
 
       nodes = Array.from({ length: count }, (_, i) => ({
         x: Math.random() * window.innerWidth,
@@ -93,7 +95,17 @@ export default function AIBackground() {
       }));
     };
 
+    let paused = false;
+
+    const onVisibility = () => {
+      paused = document.hidden;
+    };
+
     const draw = () => {
+      if (paused) {
+        animationId = requestAnimationFrame(draw);
+        return;
+      }
       const w = window.innerWidth;
       const h = window.innerHeight;
       time += 0.016;
@@ -248,8 +260,11 @@ export default function AIBackground() {
     window.addEventListener('touchmove', onTouch, { passive: true });
     window.addEventListener('touchend', onLeave);
 
+    document.addEventListener('visibilitychange', onVisibility);
+
     return () => {
       cancelAnimationFrame(animationId);
+      document.removeEventListener('visibilitychange', onVisibility);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('mouseleave', onLeave);

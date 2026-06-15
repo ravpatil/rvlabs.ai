@@ -1,182 +1,187 @@
 {
+  "brandTagline": "We ship LLMs on OpenShift — not just slide decks.",
   "navLinks": [
-    {
-      "label": "Services",
-      "href": "#services"
-    },
-    {
-      "label": "Why RVAI",
-      "href": "#why"
-    },
-    {
-      "label": "Blogs",
-      "href": "#blogs"
-    },
-    {
-      "label": "Trainings",
-      "href": "#trainings"
-    },
-    {
-      "label": "Community",
-      "href": "#community"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
-    }
+    { "label": "Services", "href": "/#services" },
+    { "label": "Work", "href": "/#case-studies" },
+    { "label": "Blogs", "href": "/blog" },
+    { "label": "Trainings", "href": "/trainings" },
+    { "label": "Community", "href": "/community" },
+    { "label": "Contact", "href": "/#contact" }
   ],
   "hero": {
     "badge": "Neural intelligence. Enterprise scale.",
     "title": "Where AI meets production-ready engineering.",
+    "typingLine": "From GPU cluster to production agent in 90 days.",
     "copy": "RVAI Labs combines generative AI, cloud-native infrastructure, and LLMOps expertise to help organizations build, deploy, and scale intelligent systems.",
-    "primaryCta": {
-      "label": "Start a Project",
-      "href": "#contact"
-    },
-    "secondaryCta": {
-      "label": "Explore Services",
-      "href": "#services"
-    }
+    "primaryCta": { "label": "Book Discovery Call", "href": "#contact" },
+    "secondaryCta": { "label": "Try Ask RVAI", "href": "#ask-rvai" }
   },
   "services": [
     {
       "name": "AI Strategy & Consulting",
       "description": "Align AI roadmaps with security, compliance, and enterprise operational requirements.",
-      "icon": "strategy"
+      "icon": "strategy",
+      "stack": ["Roadmaps", "Risk assessment", "Use-case prioritization", "Executive workshops"]
     },
     {
       "name": "Enterprise AI Training",
       "description": "Enable developer and platform teams with practical AI skills and hands-on workshops.",
-      "icon": "training"
+      "icon": "training",
+      "stack": ["Hands-on labs", "Team enablement", "Certification prep", "Custom curricula"]
     },
     {
       "name": "GenAI Workshops",
       "description": "Run guided sessions that surface use cases, metrics, and MVP pathways for your business.",
-      "icon": "workshop"
+      "icon": "workshop",
+      "stack": ["RAG design", "Prompt patterns", "MVP scoping", "ROI modeling"]
     },
     {
       "name": "Agentic AI Solutions",
       "description": "Design intelligent workflows and automation that integrate with existing enterprise systems.",
-      "icon": "agents"
+      "icon": "agents",
+      "stack": ["LangGraph", "Tool routing", "Policy gates", "Audit trails"]
     },
     {
       "name": "OpenShift AI & Kubernetes AI",
       "description": "Build scalable AI platforms on OpenShift and Kubernetes with enterprise-grade tooling.",
-      "icon": "platform"
+      "icon": "platform",
+      "stack": ["OpenShift AI", "KServe", "GPU scheduling", "Multi-tenancy"]
     },
     {
       "name": "Model Serving & LLMOps",
       "description": "Deploy, monitor, and manage LLMs with operational stability and cost control.",
-      "icon": "llmops"
+      "icon": "llmops",
+      "stack": ["vLLM", "Prometheus", "Eval pipelines", "Cost dashboards"]
     }
   ],
   "whyItems": [
+    { "title": "Enterprise-first", "description": "Security, compliance, and operational rigor baked into every AI initiative." },
+    { "title": "Open-source native", "description": "Deep expertise in Kubernetes, OpenShift, and the cloud-native AI ecosystem." },
+    { "title": "AI + Cloud synergy", "description": "Specialized at the intersection of generative AI and platform engineering." },
+    { "title": "Battle-tested delivery", "description": "Real-world implementation experience from prototype to production." }
+  ],
+  "industries": ["Financial Services", "Healthcare", "Telecom", "Manufacturing", "Public Sector", "Technology"],
+  "caseStudies": [
     {
-      "title": "Enterprise-first",
-      "description": "Security, compliance, and operational rigor baked into every AI initiative."
+      "title": "LLM Platform on OpenShift",
+      "client": "Global Financial Services",
+      "problem": "Scattered AI pilots with no shared inference layer or governance.",
+      "approach": "Unified OpenShift AI platform with vLLM serving, RAG pipelines, and SSO integration.",
+      "outcome": "40% faster time-to-production, centralized cost tracking, SOC2-aligned audit logs.",
+      "metrics": ["40% faster delivery", "3 teams onboarded", "99.9% uptime"]
     },
     {
-      "title": "Open-source native",
-      "description": "Deep expertise in Kubernetes, OpenShift, and the cloud-native AI ecosystem."
+      "title": "Enterprise RAG Rollout",
+      "client": "Healthcare Technology",
+      "problem": "Support teams drowning in documentation; generic chatbots failed compliance review.",
+      "approach": "Hybrid retrieval, PHI-aware guardrails, human-in-the-loop escalation.",
+      "outcome": "35% ticket deflection in 90 days with full traceability for regulators.",
+      "metrics": ["35% deflection", "90-day rollout", "Full audit trail"]
     },
     {
-      "title": "AI + Cloud synergy",
-      "description": "Specialized at the intersection of generative AI and platform engineering."
-    },
-    {
-      "title": "Battle-tested delivery",
-      "description": "Real-world implementation experience from prototype to production."
+      "title": "Agentic Ops Automation",
+      "client": "Telecom Platform Team",
+      "problem": "Manual runbooks for incident triage slowing MTTR.",
+      "approach": "Constrained agents with approved tool APIs, Prometheus integration, on-call playbooks.",
+      "outcome": "28% reduction in mean time to resolution for L2 incidents.",
+      "metrics": ["28% MTTR reduction", "12 automated workflows", "Zero policy violations"]
     }
   ],
-  "blogPosts": [
+  "testimonials": [
     {
-      "title": "Enterprise AI Roadmap for 2026",
-      "description": "A practical guide for turning AI experiments into production-ready systems.",
-      "href": "#",
-      "date": "Mar 2026",
-      "tag": "Strategy"
+      "quote": "RVAI Labs didn't just advise — they sat with our platform team and shipped a production inference stack we could operate.",
+      "name": "Platform Engineering Lead",
+      "role": "Enterprise Financial Services"
     },
     {
-      "title": "Kubernetes AI Patterns",
-      "description": "How to architect scalable AI workloads on OpenShift and cloud native platforms.",
-      "href": "#",
-      "date": "Feb 2026",
-      "tag": "Platform"
+      "quote": "The GenAI workshop surfaced three high-ROI use cases in two days. We had an MVP path before the week ended.",
+      "name": "VP of Engineering",
+      "role": "Healthcare SaaS"
     },
     {
-      "title": "LLMOps for Real Teams",
-      "description": "Best practices for deployment, monitoring, and support of large language models.",
-      "href": "#",
-      "date": "Jan 2026",
-      "tag": "LLMOps"
-    },
-    {
-      "title": "Building Agentic Workflows",
-      "description": "Design patterns for autonomous AI agents in enterprise environments.",
-      "href": "#",
-      "date": "Dec 2025",
-      "tag": "Agents"
+      "quote": "Best LLMOps training we've run. Our SREs finally speak the same language as our data science team.",
+      "name": "Director of Cloud Operations",
+      "role": "Telecom"
     }
+  ],
+  "certifications": ["OpenShift", "Kubernetes CKA", "CNCF Ecosystem", "Enterprise AI Speaker", "LLMOps Practitioner"],
+  "howWeWork": [
+    { "step": "01", "title": "Discovery", "description": "Map use cases, constraints, and success metrics with stakeholders." },
+    { "step": "02", "title": "Architecture", "description": "Design reference stack on your cloud-native platform." },
+    { "step": "03", "title": "Build & PoC", "description": "Ship a production-shaped prototype with evals and observability." },
+    { "step": "04", "title": "Production", "description": "Harden, scale, and hand off with runbooks and team training." }
+  ],
+  "labTeam": [
+    { "name": "RVAI Platform Practice", "focus": "OpenShift AI, GPU scheduling, multi-tenant inference", "icon": "platform" },
+    { "name": "RVAI LLMOps Practice", "focus": "Serving, monitoring, cost optimization, eval pipelines", "icon": "llmops" },
+    { "name": "RVAI Agents Practice", "focus": "Workflow automation, tool integration, enterprise guardrails", "icon": "agents" },
+    { "name": "RVAI Enablement", "focus": "Workshops, bootcamps, and team certification programs", "icon": "training" }
+  ],
+  "blogPosts": [
+    { "title": "Enterprise AI Roadmap for 2026", "description": "A practical guide for turning AI experiments into production-ready systems.", "href": "/blog/enterprise-ai-roadmap-2026", "date": "Mar 2026", "tag": "Strategy", "slug": "enterprise-ai-roadmap-2026" },
+    { "title": "Kubernetes AI Patterns", "description": "How to architect scalable AI workloads on OpenShift and cloud native platforms.", "href": "/blog/kubernetes-ai-patterns", "date": "Feb 2026", "tag": "Platform", "slug": "kubernetes-ai-patterns" },
+    { "title": "LLMOps for Real Teams", "description": "Best practices for deployment, monitoring, and support of large language models.", "href": "/blog/llmops-for-real-teams", "date": "Jan 2026", "tag": "LLMOps", "slug": "llmops-for-real-teams" },
+    { "title": "Building Agentic Workflows", "description": "Design patterns for autonomous AI agents in enterprise environments.", "href": "/blog/building-agentic-workflows", "date": "Dec 2025", "tag": "Agents", "slug": "building-agentic-workflows" }
   ],
   "trainings": [
     {
+      "slug": "genai-for-developers",
       "title": "GenAI for Developers",
       "description": "Hands-on workshop covering prompt engineering, RAG, and API integration.",
-      "href": "#",
+      "href": "/trainings/genai-for-developers",
       "duration": "2 days",
-      "level": "Intermediate"
+      "level": "Intermediate",
+      "price": "Contact for pricing",
+      "syllabus": ["Prompt engineering patterns", "RAG architecture", "API integration", "Security basics", "Capstone project"]
     },
     {
+      "slug": "openshift-ai-bootcamp",
       "title": "OpenShift AI Bootcamp",
       "description": "Deploy and manage AI workloads on OpenShift with enterprise tooling.",
-      "href": "#",
+      "href": "/trainings/openshift-ai-bootcamp",
       "duration": "3 days",
-      "level": "Advanced"
+      "level": "Advanced",
+      "price": "Contact for pricing",
+      "syllabus": ["OpenShift AI overview", "GPU scheduling", "Model serving with KServe", "Pipelines", "Production hardening"]
     },
     {
+      "slug": "llmops-masterclass",
       "title": "LLMOps Masterclass",
       "description": "End-to-end model serving, monitoring, and cost optimization strategies.",
-      "href": "#",
+      "href": "/trainings/llmops-masterclass",
       "duration": "1 day",
-      "level": "Advanced"
+      "level": "Advanced",
+      "price": "Contact for pricing",
+      "syllabus": ["Serving patterns", "Observability", "Eval pipelines", "Cost control", "Incident response"]
     },
     {
+      "slug": "ai-infrastructure-fundamentals",
       "title": "AI Infrastructure Fundamentals",
       "description": "GPU scheduling, model serving, and platform architecture for AI teams.",
-      "href": "#",
+      "href": "/trainings/ai-infrastructure-fundamentals",
       "duration": "2 days",
-      "level": "Beginner"
+      "level": "Beginner",
+      "price": "Contact for pricing",
+      "syllabus": ["AI platform basics", "Kubernetes for AI", "Storage & networking", "Intro to serving", "Lab exercises"]
     }
   ],
   "community": [
-    {
-      "title": "AI Platform Meetups",
-      "description": "Monthly sessions on Kubernetes AI, LLMOps, and enterprise GenAI adoption.",
-      "href": "#",
-      "type": "Events"
-    },
-    {
-      "title": "Open Source Contributions",
-      "description": "Active contributions to cloud-native AI projects and tooling ecosystems.",
-      "href": "#",
-      "type": "OSS"
-    },
-    {
-      "title": "Technical Talks",
-      "description": "Conference presentations and community talks on AI infrastructure and agents.",
-      "href": "#",
-      "type": "Speaking"
-    },
-    {
-      "title": "Knowledge Base",
-      "description": "Curated resources, guides, and reference architectures for AI practitioners.",
-      "href": "#",
-      "type": "Resources"
-    }
+    { "title": "AI Platform Meetups", "description": "Monthly sessions on Kubernetes AI, LLMOps, and enterprise GenAI adoption.", "href": "/community#meetups", "type": "Events" },
+    { "title": "Open Source Contributions", "description": "Active contributions to cloud-native AI projects and tooling ecosystems.", "href": "https://github.com/ravpatil", "type": "OSS" },
+    { "title": "Technical Talks", "description": "Conference presentations and community talks on AI infrastructure and agents.", "href": "/community#talks", "type": "Speaking" },
+    { "title": "RVAI Signal Newsletter", "description": "Monthly notes on enterprise AI infrastructure, LLMOps, and platform patterns.", "href": "/community#newsletter", "type": "Resources" }
   ],
   "contactInfo": {
     "email": "rvgpatil@gmail.com",
-    "linkedin": "linkedin.com/in/rvlabs",
-    "whatsapp": "+91 8698599367"
+    "linkedin": "https://linkedin.com/in/rvlabs",
+    "whatsapp": "+91 8698599367",
+    "whatsappLink": "https://wa.me/918698599367",
+    "calendlyUrl": "",
+    "responseTime": "We respond within 24 hours on business days."
+  },
+  "newsletter": {
+    "title": "RVAI Signal",
+    "description": "Monthly insights on enterprise AI infrastructure and LLMOps. No spam.",
+    "cta": "Subscribe via email"
   }
 }

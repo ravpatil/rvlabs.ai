@@ -2,22 +2,24 @@
 
 import { useEffect, useState } from 'react';
 import TileCard from './TileCard';
+import TypingText from './TypingText';
 
 type Hero = {
   badge: string;
   title: string;
+  typingLine?: string;
   copy: string;
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
 };
 
-const stats = [
-  { value: '50+', label: 'Enterprise deployments' },
-  { value: '12', label: 'AI workshops delivered' },
-  { value: '99.9%', label: 'Platform uptime focus' },
+const capabilities = [
+  { value: 'OpenShift', label: 'AI platform expertise' },
+  { value: 'LLMOps', label: 'Production serving' },
+  { value: '90 days', label: 'Typical PoC-to-prod path' },
 ];
 
-export default function HeroSection({ hero }: { hero: Hero }) {
+export default function HeroSection({ hero, tagline }: { hero: Hero; tagline?: string }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -25,8 +27,13 @@ export default function HeroSection({ hero }: { hero: Hero }) {
   }, []);
 
   return (
-    <section className="relative px-6 pb-20 pt-12 sm:px-8 sm:pt-16">
+    <section className="relative px-6 pb-12 pt-12 sm:px-8 sm:pt-16">
       <div className="mx-auto max-w-7xl">
+        {tagline && (
+          <p className="mb-6 text-center text-sm font-medium text-pink-300/90 sm:text-base">
+            {tagline}
+          </p>
+        )}
         <div
           className={`grid gap-4 transition-all duration-700 sm:grid-cols-2 lg:grid-cols-4 ${
             visible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
@@ -44,6 +51,12 @@ export default function HeroSection({ hero }: { hero: Hero }) {
                     {hero.title}
                   </span>
                 </h1>
+                {hero.typingLine && (
+                  <TypingText
+                    text={hero.typingLine}
+                    className="mt-4 font-mono text-sm text-cyan-400/90 sm:text-base"
+                  />
+                )}
                 <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-400">{hero.copy}</p>
               </div>
               <div className="flex flex-wrap gap-3">
@@ -66,45 +79,25 @@ export default function HeroSection({ hero }: { hero: Hero }) {
             </div>
           </TileCard>
 
-          <TileCard accent="cyan" className="flex flex-col justify-center">
-            <p className="bg-gradient-to-r from-cyan-300 to-sky-400 bg-clip-text font-mono text-3xl font-bold text-transparent">{stats[0].value}</p>
-            <p className="mt-2 text-sm text-slate-400">{stats[0].label}</p>
-          </TileCard>
+          {capabilities.map((cap, i) => (
+            <TileCard key={cap.label} accent={(['cyan', 'orange', 'violet'] as const)[i]} className="flex flex-col justify-center">
+              <p className="bg-gradient-to-r from-cyan-300 to-pink-400 bg-clip-text font-mono text-2xl font-bold text-transparent sm:text-3xl">{cap.value}</p>
+              <p className="mt-2 text-sm text-slate-400">{cap.label}</p>
+            </TileCard>
+          ))}
 
-          <TileCard accent="orange" className="flex flex-col justify-center">
-            <p className="bg-gradient-to-r from-orange-300 to-pink-400 bg-clip-text font-mono text-3xl font-bold text-transparent">{stats[1].value}</p>
-            <p className="mt-2 text-sm text-slate-400">{stats[1].label}</p>
-          </TileCard>
-
-          <TileCard accent="pink" className="flex flex-col justify-center lg:col-span-2">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400">
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">AI-Native Platform Engineering</p>
-                <p className="text-xs text-slate-500">OpenShift · Kubernetes · LLMOps</p>
-              </div>
-            </div>
-            <div className="mt-4 flex gap-2">
+          <TileCard accent="pink" className="flex flex-col justify-center lg:col-span-1">
+            <div className="flex flex-wrap gap-2">
               {['LLM', 'RAG', 'Agents', 'MLOps'].map((tag, i) => {
                 const tagColors = ['text-violet-300 border-violet-400/30', 'text-cyan-300 border-cyan-400/30', 'text-pink-300 border-pink-400/30', 'text-orange-300 border-orange-400/30'];
                 return (
-                <span
-                  key={tag}
-                  className={`rounded-md border bg-white/[0.04] px-2 py-1 font-mono text-[10px] ${tagColors[i]}`}
-                >
-                  {tag}
-                </span>
-              );})}
+                  <span key={tag} className={`rounded-md border bg-white/[0.04] px-2 py-1 font-mono text-[10px] ${tagColors[i]}`}>
+                    {tag}
+                  </span>
+                );
+              })}
             </div>
-          </TileCard>
-
-          <TileCard accent="violet" className="flex flex-col justify-center">
-            <p className="bg-gradient-to-r from-violet-300 to-pink-400 bg-clip-text font-mono text-3xl font-bold text-transparent">{stats[2].value}</p>
-            <p className="mt-2 text-sm text-slate-400">{stats[2].label}</p>
+            <p className="mt-3 text-xs text-slate-500">Core stack focus</p>
           </TileCard>
         </div>
       </div>
